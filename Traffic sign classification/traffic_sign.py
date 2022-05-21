@@ -14,11 +14,12 @@ from keras.layers import Conv2D, MaxPool2D, Dense, Flatten, Dropout
 data = []
 labels = []
 classes = 43
-cur_path = os.getcwd()
+cur_path = os.getcwd() + "\\archive"
 
 # Retrieving the images and their labels
 for i in range(classes):
-    path = os.path.join(cur_path, 'train', str(i))
+    print("load class", i, "....")
+    path = os.path.join(cur_path, 'Train', str(i))
     images = os.listdir(path)
 
     for a in images:
